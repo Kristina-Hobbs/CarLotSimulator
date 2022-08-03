@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CarLotSimulator
 {
@@ -6,17 +7,60 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            //TODO
+            var carLot = new CarLot(); 
 
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property
+            var dodge = new Car()
+            {
+                Year = 2014,
+                Make = "Dodge",
+                Model = "Dart",
+                EngineNoise = "vroom",
+                HonkNoise= "beepbeep",
+                IsDriveable = "yes"
+            };
+
+            dodge.MakeEngineNoise();
+            dodge.MakeHonkNoise();
+
+            var vw = new Car()
+            {
+                Year = 2021,
+                Make = "VW",
+                Model = "ID.4",
+                EngineNoise = "whoosh",
+                HonkNoise = "ehhhh",
+                IsDriveable = "yes" };
+    
+            vw.MakeEngineNoise();
+            vw.MakeHonkNoise();
+
+            var toyota = new Car()
+            {
+                Year = 2020,
+                Make = "Toyota",
+                Model = "Rav4",
+                EngineNoise = "whir",
+                HonkNoise = "boing",
+                IsDriveable = "yes"
+            };
+
+            toyota.MakeEngineNoise();
+            toyota.MakeHonkNoise();
+
+            carLot.ParkingLot = new List<Car>() { dodge, vw, toyota };
+
+        foreach (var car in carLot.ParkingLot)
+            {
+                Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
+                car.MakeEngineNoise();
+                car.MakeHonkNoise();
+                Console.WriteLine("-----------------");
+
+            }
 
 
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
+
+
 
             //*************BONUS*************//
 
