@@ -5,9 +5,26 @@ namespace CarLotSimulator
 {
     public class CarLot
 
-    { 
-            public List<Car> ParkingLot { get; set; } = new List<Car>();
-        
+    {
+        public CarLot()
+        {
+        }
+
+    public static int numberOfCars = 0;
+
+    public List<Car> Cars = new List<Car>();
+
     }
+
+    
+
 }
 
+
+
+
+//Building on our car lot simulator project, create a CarLot class with a static
+//field called numberOfCars. Have this number only increment when in our program we
+//create a new Car.From there create 3 cars in the Main() and then each time you
+//create a car, do a Console.WriteLine() printing the current number of cars in the
+//car lot. 

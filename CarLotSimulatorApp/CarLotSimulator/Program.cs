@@ -47,9 +47,11 @@ namespace CarLotSimulator
             toyota.MakeEngineNoise();
             toyota.MakeHonkNoise();
 
-            carLot.ParkingLot = new List<Car>() { dodge, vw, toyota };
+            carLot.Cars = new List<Car>() { dodge, vw, toyota };
 
-        foreach (var car in carLot.ParkingLot)
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars}");
+
+        foreach(var car in carLot.Cars)
             {
                 Console.WriteLine($"{car.Year} {car.Make} {car.Model}");
                 car.MakeEngineNoise();
@@ -59,8 +61,7 @@ namespace CarLotSimulator
             }
 
 
-
-
+           
 
             //*************BONUS*************//
 
